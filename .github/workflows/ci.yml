@@ -34,12 +34,13 @@ jobs:
       - name: Run tests
         run: mvn test
         # запуск тестов
-      - name: Notify Telegram Success
+
+      - name: Notify Telegram on success
         if: success()
         run: |
-          curl -s -X POST https://api.telegram.org/bot${{ 7034034388:AAEaAOiARBc0rCdJgGfrzkhUziYQlIeBkJU }}/sendMessage -d chat_id=${{ 840472850 }} -d text="✅🐈Сборка и тесты прошли успешно"
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -d chat_id=${{ secrets.CHAT_ID }} -d text="✅🐈Сборка и тесты прошли успешно"
 
-      - name: Notify Telegram NOT Success
+      - name: Notify Telegram on failure
         if: failure()
         run: |
-          curl -s -X POST https://api.telegram.org/bot${{ 7034034388:AAEaAOiARBc0rCdJgGfrzkhUziYQlIeBkJU }}/sendMessage -d chat_id=${{ 840472850 }} -d text="⚡️Сборка или тесты не прошли"
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -d chat_id=${{ secrets.CHAT_ID }} -d text="⚡️Сборка или тесты не прошли"
