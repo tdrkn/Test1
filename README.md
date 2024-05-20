@@ -1,4 +1,5 @@
 # Техническое задание №2 (ТЗ2)
+[![Java CI with Maven](https://github.com/tdrkn/Test1/actions/workflows/ci.yml/badge.svg)](https://github.com/tdrkn/Test1/actions/workflows/ci.yml)
 ## Описание 
 Этот проект помогает найти из определенного текстового файла, состоящего только из целочисленных чисел следующие моменты:
 - Минимальное число
