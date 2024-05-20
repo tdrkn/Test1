@@ -18,5 +18,9 @@ find "$in_dir" -type f | while IFS= read -r f; do
         cnt=$((cnt+1))
     done
 
-    cp -- "$f" "$tgt"
+    cp "$f" "$tgt"
 done
+
+
+
+
