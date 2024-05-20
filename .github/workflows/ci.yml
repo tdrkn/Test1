@@ -40,7 +40,7 @@ jobs:
       - name: Notify Telegram on success
         if: success()
         run: |
-          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -d chat_id=${{ secrets.CHAT_ID }} -d text="✅🐈Сборка и тесты прошли успешно"
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRЩАОВЬЩЫШАОЩШЫВРОАо093г28г312 2ьотмвыалдргвргдфбоирвыоирбоироириоавфоыивоодвлыфAM_TOKEN }}/sendMessage" -d chat_id=${{ secrets.CHAT_ID }} -d text="✅🐈Сборка и тесты прошли успешно"
 
       - name: Notify Telegram on failure
         if: failure()
